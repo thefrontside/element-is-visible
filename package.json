@@ -1,11 +1,11 @@
 {
-  "name": "element-is-visible-selenium",
+  "name": "element-is-visible",
   "version": "0.1.0",
   "description": "Determine whether a DOM element is visible or not, extracted from Selenium",
   "main": "dist/index.js",
   "browser": "dist/esm/index.js",
   "typings": "dist/types/index.d.ts",
-  "repository": "https://github.com/thefrontside/element-is-visible-selenium",
+  "repository": "https://github.com/thefrontside/element-is-visible",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "Apache-2.0",
   "files": [
