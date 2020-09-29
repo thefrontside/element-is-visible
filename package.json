@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "browser": "dist/esm/index.js",
   "typings": "dist/types/index.d.ts",
-  "repository": "https://github.com/bigtest/element-is-visible-selenium",
+  "repository": "https://github.com/thefrontside/element-is-visible-selenium",
   "author": "Frontside Engineering <engineering@frontside.com>",
   "license": "Apache-2.0",
   "files": [
