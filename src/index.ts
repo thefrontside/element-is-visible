@@ -60,7 +60,7 @@ export function isVisible(elem: HTMLElement): boolean {
       elemOpacity = elemOpacity * getOpacity(parentElement);
     }
     return elemOpacity;
-  };
+  }
 
   function getOverflowState(elem: HTMLElement): OverflowState {
     let region = elem.getBoundingClientRect();
@@ -208,7 +208,7 @@ export function isVisible(elem: HTMLElement): boolean {
 
     // Does not overflow any ancestor.
     return 'none';
-  };
+  }
 
   function isVisibleInner(elem: HTMLElement, ignoreOpacity = false): boolean {
     // By convention, BODY element is always shown: BODY represents the document
@@ -278,7 +278,7 @@ export function isVisible(elem: HTMLElement): boolean {
     }
 
     return true;
-  };
+  }
 
   return isVisibleInner(elem);
 }
