@@ -22,6 +22,7 @@ export function isVisible(elem: HTMLElement): boolean {
     throw new Error('cannot check visibility of non attached element');
   }
   let window = defaultView; // retype as non-null for use in closures
+  let isJSDOM = window.navigator.userAgent.match(/jsdom/i);
 
   function getOpacity(elem: HTMLElement): number {
     // By default the element is opaque.
@@ -239,7 +240,7 @@ export function isVisible(elem: HTMLElement): boolean {
             return isTextNode(n) || (isElement(n) && positiveSize(n));
           });
     }
-    if (!positiveSize(elem)) {
+    if (!isJSDOM && !positiveSize(elem)) {
       return false;
     }
 
@@ -251,7 +252,7 @@ export function isVisible(elem: HTMLElement): boolean {
                    !positiveSize(n);
           });
     }
-    if (hiddenByOverflow(elem)) {
+    if (!isJSDOM && hiddenByOverflow(elem)) {
       return false;
     }
 
