@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+  </head>
+  <body>
+    <h1>Test App</h1>
+
+    <input type="text" data-target="regular-field"/>
+    <input type="hidden" data-target="hidden-field"/>
+
+    <noscript data-target="noscript">Hello</noscript>
+
+    <div data-target="visibility-hidden" style="visibility:hidden">Text</div>
+    <div data-target="visibility-collapse" style="visibility:collapse">Text</div>
+
+    <div data-target="semi-opaque" style="opacity:0.5">Text</div>
+    <div data-target="transparent" style="opacity:0">Text</div>
+    <div style="opacity:0">
+      <div data-target="transparent-parent">Text</div>
+    </div>
+
+    <div data-target="empty"></div>
+    <div data-target="with-text-content">Text</div>
+    <div data-target="with-child-text-content"><p>Text</p></div>
+    <div data-target="with-fixed-size" style="width:100px;height:10px"></div>
+    <div data-target="with-child-fixed-size"><div style="width:100px;height:10px"></div></div>
+
+    <div data-target="overflow-visible" style="width:0px;height:0px"><p>Text</p></div>
+    <div data-target="overflow-hidden" style="width:0px;height:0px;overflow:hidden"><p>Text</p></div>
+    <div data-target="overflow-hidden-child"><div style="width:0px;height:0px;overflow:hidden"><p>Text</p></div></div>
+  </body>
+</html>

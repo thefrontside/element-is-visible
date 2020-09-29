@@ -1,0 +1,8 @@
+{
+  "app": {
+    "command": "yarn http-server --port 36200 -c-1 test/fixtures",
+    "url": "http://localhost:36200"
+  },
+  "testFiles": ["./test/**/*.test.{ts,js}"],
+  "launch": ["chrome.headless"]
+}
