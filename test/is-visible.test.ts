@@ -1,5 +1,4 @@
-import { test } from '@bigtest/suite';
-import { createInteractor, App } from '@bigtest/interactor';
+import { test, createInteractor, App } from 'bigtest';
 import { isVisible } from '../src/index';
 
 const Target = createInteractor<HTMLElement>('target')({
