@@ -210,6 +210,14 @@ export function isVisible(elem: HTMLElement): boolean {
     return 'none';
   }
 
+  function isDisplayed(e: HTMLElement): boolean {
+    if (window.getComputedStyle(e).display == 'none') {
+      return false;
+    }
+    let parent = e.parentElement;
+    return !parent || isDisplayed(parent);
+  };
+
   function isVisibleInner(elem: HTMLElement, ignoreOpacity = false): boolean {
     // By convention, BODY element is always shown: BODY represents the document
     // and even if there's nothing rendered in there, user can always see there's
@@ -239,6 +247,10 @@ export function isVisible(elem: HTMLElement): boolean {
     // Any element with hidden/collapsed visibility is not shown.
     let visibility = window.getComputedStyle(elem).visibility;
     if (visibility == 'collapse' || visibility == 'hidden') {
+      return false;
+    }
+
+    if (!isDisplayed(elem)) {
       return false;
     }
 

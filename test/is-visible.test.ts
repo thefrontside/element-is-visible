@@ -17,6 +17,9 @@ export default test('isVisible')
   .assertion(Target('hidden-field').is({ visible: false }))
   .assertion(Target('noscript').is({ visible: false }))
 
+  .assertion(Target('display-none').is({ visible: false }))
+  .assertion(Target('display-none-parent').is({ visible: false }))
+
   .assertion(Target('visibility-hidden').is({ visible: false }))
   .assertion(Target('visibility-collapse').is({ visible: false }))
 
