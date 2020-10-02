@@ -21,6 +21,6 @@ jobs:
         restore-keys: |
           cachekey-v1-${{ runner.os }}-yarn-
     - name: Install dependencies
-      uses: thefrontside/actions/yarn@v1.8
+      run: yarn
     - name: Run tests
       run: yarn test
